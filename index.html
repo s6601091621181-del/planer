@@ -9,72 +9,101 @@
 
 <style>
     body {
-        background: #0f172a;
+        background: radial-gradient(circle at top, #0f172a, #020617);
         color: #e2e8f0;
         font-family: 'Segoe UI', sans-serif;
     }
 
     .card {
-        background: rgba(30,41,59,0.7);
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        border: 1px solid rgba(255,255,255,0.1);
-        transition: 0.3s;
+        background: rgba(30,41,59,0.6);
+        backdrop-filter: blur(15px);
+        border-radius: 24px;
+        border: 1px solid rgba(255,255,255,0.08);
+        transition: all 0.3s ease;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.4);
     }
 
     .card:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+    }
+
+    .btn {
+        font-weight: bold;
+        border-radius: 14px;
+        padding: 14px 28px;
+        transition: 0.3s;
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .btn-green {
+        background: linear-gradient(135deg, #10b981, #059669);
+    }
+
+    .btn-green:hover {
         transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(16,185,129,0.4);
+    }
+
+    .btn-blue {
+        background: linear-gradient(135deg, #3b82f6, #2563eb);
+    }
+
+    .btn-blue:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 30px rgba(59,130,246,0.4);
     }
 </style>
 </head>
 
-<body class="flex items-center justify-center min-h-screen p-6">
+<body class="flex items-center justify-center min-h-screen px-6">
 
-<div class="max-w-4xl w-full">
+<div class="max-w-6xl w-full">
 
     <!-- TITLE -->
-    <div class="text-center mb-10">
-        <h1 class="text-4xl font-bold text-blue-400">
+    <div class="text-center mb-16">
+        <h1 class="text-5xl font-extrabold text-blue-400 tracking-wide">
             ⚙️ GT26 Maintenance Planner
         </h1>
-        <p class="text-slate-400 mt-2">
+        <p class="text-slate-400 mt-3 text-lg">
             เลือกหน่วยเครื่อง (Unit)
         </p>
     </div>
 
-    <!-- 2 BOX -->
-    <div class="grid md:grid-cols-2 gap-8">
+    <!-- BOX -->
+    <div class="grid md:grid-cols-2 gap-12">
 
         <!-- UNIT 21 -->
         <div onclick="goUnit21()" 
-             class="card p-10 text-center cursor-pointer">
+             class="card p-14 text-center cursor-pointer">
 
-            <h2 class="text-2xl font-bold text-emerald-400 mb-4">
+            <h2 class="text-3xl font-bold text-emerald-400 mb-6">
                 UNIT 21
             </h2>
 
-            <p class="text-slate-400 mb-6">
+            <p class="text-slate-400 mb-10 text-lg">
                 เข้าไปดูแผนซ่อมของ Unit 21
             </p>
 
-            <button class="bg-emerald-600 px-6 py-3 rounded-xl hover:bg-emerald-500">
+            <button class="btn btn-green">
                 เข้าใช้งาน
             </button>
         </div>
 
         <!-- UNIT 22 -->
         <div onclick="goUnit22()" 
-             class="card p-10 text-center cursor-pointer">
+             class="card p-14 text-center cursor-pointer">
 
-            <h2 class="text-2xl font-bold text-blue-400 mb-4">
+            <h2 class="text-3xl font-bold text-blue-400 mb-6">
                 UNIT 22
             </h2>
 
-            <p class="text-slate-400 mb-6">
+            <p class="text-slate-400 mb-10 text-lg">
                 เข้าไปดูแผนซ่อมของ Unit 22
             </p>
 
-            <button class="bg-blue-600 px-6 py-3 rounded-xl hover:bg-blue-500">
+            <button class="btn btn-blue">
                 เข้าใช้งาน
             </button>
         </div>
@@ -84,15 +113,13 @@
 </div>
 
 <script>
-
 function goUnit21() {
-    window.location.href = "unit21.html"; // เปลี่ยนชื่อไฟล์ได้
+    window.location.href = "unit21.html";
 }
 
 function goUnit22() {
     window.location.href = "unit22.html";
 }
-
 </script>
 
 </body>
