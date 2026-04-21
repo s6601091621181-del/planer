@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GT26 Unit Selector</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+    body {
+        background: #0f172a;
+        color: #e2e8f0;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+        background: rgba(30,41,59,0.7);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: 1px solid rgba(255,255,255,0.1);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+</style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen p-6">
+
+<div class="max-w-4xl w-full">
+
+    <!-- TITLE -->
+    <div class="text-center mb-10">
+        <h1 class="text-4xl font-bold text-blue-400">
+            ⚙️ GT26 Maintenance Planner
+        </h1>
+        <p class="text-slate-400 mt-2">
+            เลือกหน่วยเครื่อง (Unit)
+        </p>
+    </div>
+
+    <!-- 2 BOX -->
+    <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- UNIT 21 -->
+        <div onclick="goUnit21()" 
+             class="card p-10 text-center cursor-pointer">
+
+            <h2 class="text-2xl font-bold text-emerald-400 mb-4">
+                UNIT 21
+            </h2>
+
+            <p class="text-slate-400 mb-6">
+                เข้าไปดูแผนซ่อมของ Unit 21
+            </p>
+
+            <button class="bg-emerald-600 px-6 py-3 rounded-xl hover:bg-emerald-500">
+                เข้าใช้งาน
+            </button>
+        </div>
+
+        <!-- UNIT 22 -->
+        <div onclick="goUnit22()" 
+             class="card p-10 text-center cursor-pointer">
+
+            <h2 class="text-2xl font-bold text-blue-400 mb-4">
+                UNIT 22
+            </h2>
+
+            <p class="text-slate-400 mb-6">
+                เข้าไปดูแผนซ่อมของ Unit 22
+            </p>
+
+            <button class="bg-blue-600 px-6 py-3 rounded-xl hover:bg-blue-500">
+                เข้าใช้งาน
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function goUnit21() {
+    window.location.href = "unit21.html"; // เปลี่ยนชื่อไฟล์ได้
+}
+
+function goUnit22() {
+    window.location.href = "unit22.html";
+}
+
+</script>
+
+</body>
+</html>
